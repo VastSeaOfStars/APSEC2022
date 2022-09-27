@@ -13,6 +13,10 @@ System: Windows10; Jdk17;
 
 You can download the codes, and run in any IDE such as IntelliJ IDEA. Find the Main.class, configure the input file directory and output address and all is done. then you can use the example.hex and run with it.
 
+**Input**: bytecode files, which is suffixed with '.hex'. Support entire bytecode or runtime bytecode.
+
+**Output**: entire bytecode or runtime bytecode(optional).
+
 ## License
 
 This program is issued, reproduced or used under the permission of **MIT**. Please indicate the source when using.
