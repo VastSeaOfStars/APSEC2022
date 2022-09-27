@@ -9,7 +9,7 @@
 
 ## How to use ChiWen
 
-System: windows10; jdk17; 
+System: Windows10; Jdk17; 
 
 You can download the codes, and run in any IDE such as IntelliJ IDEA. Find the Main.class, configure the input file directory and output address and all is done. then you can use the example.hex and run with it.
 
