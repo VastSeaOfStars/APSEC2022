@@ -1,4 +1,5 @@
 # ChiWen(螭吻)
+![image](https://github.com/VastSeaOfStars/APSEC2022/blob/main/ChiWen/ChiWen.png)
 
 **ChiWen** is a bytecode obfuscation tool for Ethereum smart contract solidity language, which uses the following four bytecode obfuscation methods:
 
