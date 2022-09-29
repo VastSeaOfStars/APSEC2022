@@ -28,7 +28,6 @@ public class FalseBranchConfuse {
         the program counter simply increments and executes the next instruction (ie, when it is 0, it will not jump).
     */
 
-    //1.先检索目标字节码中是否有jump指令（56），若有则返回jump的索引位置，没有则返回-1
     /**
      * Retrieves whether there is a jump instruction in the object bytecode
      * @param bytecode
