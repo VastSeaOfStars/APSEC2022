@@ -1,7 +1,8 @@
-# BOSC(**B**ytecode **O**bfuscation for **S**mart **C**ontract)
+# BOSC
+
+BOSC(**B**ytecode **O**bfuscation for **S**mart **C**ontract)
 
 **BOSC** is a bytecode obfuscation tool for Ethereum smart contract solidity language, which uses the following four bytecode obfuscation methods:
-
 1. **incomplete instruction obfuscation**
 2. **false branch obfuscation**
 3. **instruction rearrange obfuscation** 
