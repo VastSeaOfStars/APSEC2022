@@ -7,15 +7,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-/**
- * data output class
- */
 public class ByteCodeOutput {
-    //1、Receive the obfuscated bytecode and output it as "current time + obfuscated.hex" file
 
-
-    // The main function of this method is to determine whether the creation of the file is successful,
-    // if successful, return true, otherwise return false
     public static boolean createFile(String destFileName,String info) {
         File file = new File(destFileName);
         if (file.exists()) {
@@ -26,9 +19,6 @@ public class ByteCodeOutput {
             System.out.println("Create a single file" + destFileName + "failed, target file cannot be a directory!");
             return false;
         }
-
-
-        // Determine whether the directory where the target file is located exists
         if (!file.getParentFile().exists()) {
             System.out.println("Create" + file.getName() + "The directory does not exist, it is being created!");
             if (!file.getParentFile().mkdirs()) {
@@ -36,9 +26,6 @@ public class ByteCodeOutput {
                 return false;
             }
         }
-
-
-        // Create object file
         try {
             if (file.createNewFile()) {
                 System.out.println("Create a single file" + destFileName + "succeeded！");
@@ -56,7 +43,6 @@ public class ByteCodeOutput {
             return false;
         }
     }
-
 
     public static void main(String[] args) {
 
