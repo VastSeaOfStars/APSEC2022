@@ -12,11 +12,6 @@ import static utils.CodeStingToArray.ToArray;
  */
 public class ByteCodeCleanAndRecovry {
 
-    /**
-     * Bytecode cleaning
-     * @param bytecode
-     * @return
-     */
     public static String[] byteCodeClean(String[] bytecode){
         //60 80 60 40
         //0  1  2  3
@@ -46,21 +41,16 @@ public class ByteCodeCleanAndRecovry {
 //            System.arraycopy(bytecode,start+1,rs,0,bytecode.length-start);
             System.out.println(start+2);
               String[] rs = ArrayUtil.sub(bytecode, start+1, end);
-              return rs; //runtime
+              return rs; 
         }else {//有auxdata
             System.out.println("有auxdata");
 //            String[] rs = new String[end-start+1];
 //            System.arraycopy(bytecode,start+1,rs,0,end-start+1);
             String[] rs = ArrayUtil.sub(bytecode, start+1, end);
-            return rs; //runtime
+            return rs; 
         }
     }
 
-    /**
-     * Bytecode recovery
-     * @param bytecode
-     * @return
-     */
     public static String[] byteCodeRecovery(String[] bytecode, String[] obfuscatedBytecode){
 
         int start = 0;
@@ -87,14 +77,14 @@ public class ByteCodeCleanAndRecovry {
 //        String[] auxdata = new String[bytecode.length-end];
 
         if(end==bytecode.length-1){
-            System.out.println("no auxdata...");//那就把runtime和deploy连起来就可以
+            System.out.println("no auxdata...");
 //            System.arraycopy(bytecode,0,deploydata,0,start);
 //            System.arraycopy(bytecode,end,auxdata,0,bytecode.length-end);
             String[] deploy =  ArrayUtil.sub(bytecode, 0, start+1);
             String[] rs = arrayJoin(deploy, obfuscatedBytecode);
             return rs;
         }else {
-            System.out.println("have auxdata...");//把deploy、runtime和auxdata全部连起来
+            System.out.println("have auxdata...");
             String[] deploy =  ArrayUtil.sub(bytecode, 0, start+1);
             String[] auxdata =  ArrayUtil.sub(bytecode, end,bytecode.length);
 
@@ -107,11 +97,6 @@ public class ByteCodeCleanAndRecovry {
         }
     }
 
-    /**
-     * Merge two arrays
-     * @param a
-     * @param b
-     */
     public static String[] arrayJoin(String[] a,String[] b){
 
         String[] arr=new String[a.length+b.length];
