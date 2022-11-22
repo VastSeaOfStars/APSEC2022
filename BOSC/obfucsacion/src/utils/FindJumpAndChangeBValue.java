@@ -6,18 +6,8 @@ import java.util.List;
 
 import static utils.CodeStingToArray.ToArray;
 
-/**
- * 1. Find all jump or jumpi values in the string array (return their indices)
- * 2. Find all jump or jumpi values after the current index (the two can be combined, the above index is 0)
- * 3. Change the b value in front of all jump and jumpi (depending on how many instructions are added in the obfuscation step)
- */
 public class FindJumpAndChangeBValue {
-    /**
-     * Find all jump or jumpi values after the current index, if index is 0, start from the beginning
-     * @param bytecode
-     * @param index
-     * @return List<Integer>类型索引值
-     */
+
     public static List<Integer> findDupicateInArray(String[] bytecode, int index) {
 
         int count=0;
@@ -37,13 +27,6 @@ public class FindJumpAndChangeBValue {
         return indexList;
     }
 
-    /**
-     * Change the b value in front of jump and jumpi of an index. When you need to change all of them, you only need to traverse
-     * @param bytecode
-     * @param index jump/jumpi's index
-     * @param value
-     * @return
-     */
     public static String[] ChangeBValue(String[] bytecode,int index, int value){
         //Be aware of hexadecimal and decimal issues
         if (index == 0){
