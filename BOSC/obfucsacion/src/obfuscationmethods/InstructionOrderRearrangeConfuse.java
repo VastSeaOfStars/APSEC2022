@@ -4,10 +4,6 @@ import java.util.*;
 
 /**
  * Instruction sequence rearrangement confusion technology: mainly to change the execution order of some mutually
- * independent instructions to achieve the purpose of confusion
- * The key question is: how to determine which instructions are independent of each other?
- * It is necessary to determine the independence of some instructions in advance and extract them,
- * and then traverse the original bytecode to find these instructions and exchange them in order
  */
 public class InstructionOrderRearrangeConfuse {
 
