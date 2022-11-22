@@ -14,10 +14,6 @@ import static utils.insertElement.insertElement;
  */
 public class IncompleteInstructionsConfuse {
 
-    /**
-     * Incomplete instruction
-     * @return List<String>
-     */
     public static List<String> ConstructIncompleteInstructions(){
         List<String> IncompleteInstructions = new ArrayList<>();
         IncompleteInstructions.add("01");
@@ -25,28 +21,10 @@ public class IncompleteInstructionsConfuse {
         return IncompleteInstructions;
     }
 
-    //2、构造无条件跳转指令，不完整指令放入其中，之后一起插入
-    /**
-     * Construct unconditional jump instructions, pay attention to the problem of offset (important)
-     * @return unconditional jump instruction
-     */
     public static String ConstructUnconditionalJump(){
-//We jump over the invalid and just go to the push
-//        PUSH1 4  // Offset 0
-//        JUMP     // Offset 2 (previous instruction occupies 2 bytes)
-//        INVALID  // Offset 3
-//        JUMPDEST // Offset 4
-//        PUSH1 1  // Offset 5
-
         return "60"+ "00" + "56" + ConstructIncompleteInstructions().get(1) +"5b";
     }
 
-    //3、Instruction Insertion Position Method for Incomplete Instruction Obfuscation
-    /**
-     * Instruction Insertion
-     * @param  bytecode
-     * @return bytecode
-     */
     public static String[] InsertIncompleteInstructions(String[] bytecode){
 
         int i = insertIndex(bytecode);
