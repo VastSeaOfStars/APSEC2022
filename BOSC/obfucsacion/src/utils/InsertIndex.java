@@ -5,9 +5,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-/**
- * This class is used to find suitable places to insert obfuscated code.
- */
 public class InsertIndex {
     //5b jumpdest
 
