@@ -14,13 +14,10 @@ import static utils.insertElement.insertElement;
  */
 public class FlowerInstructionConfuse {
 
-    //1.Construct garbage or invalid instruction
     public static String constructFlowerInstructions(){
         return "565B";
     }
 
-    //2.Insert garbage instructions. After insertion,
-    // the b value of all subsequent jump instructions should be increased by the corresponding offset.
     public static String[] InsertFlowerInstructions(String[] bytecode,String flowerInstruction){
 
         int index = insertIndex(bytecode);
