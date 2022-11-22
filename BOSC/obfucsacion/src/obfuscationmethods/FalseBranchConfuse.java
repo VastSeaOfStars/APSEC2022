@@ -12,23 +12,9 @@ import static utils.insertElement.insertElement;
 
 /**
  * False branch obfuscation technology: convert unconditional jumps into conditional jumps,
- * one of which can never be reached, that is, false branches
- * Note: Once a new instruction is inserted, the stack offset of all subsequent jumps or jumpi needs to be changed accordingly,
- * otherwise the jump will fail!
  */
 public class FalseBranchConfuse {
-    private int offset; //When offset, jump or jumpi, be sure to calculate the offset,
-                        // otherwise it will not jump to the correct place, which will cause problems
-
-    /*
-    Note: The jump command only needs to input the offset corresponding to jumpdest to complete the jump
-    And jumpi requires two instructions, stack input
-        counter: The byte offset in the deployed code, where execution will continue. Must be a JUMPDEST instruction.
-        b: The program counter will be changed to the new value only if this value is not 0. Otherwise,
-        the program counter simply increments and executes the next instruction (ie, when it is 0, it will not jump).
-    */
-
-    //1.先检索目标字节码中是否有jump指令（56），若有则返回jump的索引位置，没有则返回-1
+    private int offset; 
     /**
      * Retrieves whether there is a jump instruction in the object bytecode
      * @param bytecode
@@ -46,9 +32,6 @@ public class FalseBranchConfuse {
         }
         return -1;
     }
-
-    //2.If there is, change it to jumpi instruction (57), one of the true paths is the original path to ensure that
-    // the program logic does not change, and the second path is a false path, which can never be reached
     /**
      * @param bytecode
      * @param index jump's index
@@ -70,8 +53,6 @@ public class FalseBranchConfuse {
         }
         return bytecode;
     }
-
-    //3.If not, then the bytecode has no branch structure, and branch instructions can be constructed
 
     /**
      * Construct true and false branch structure and insert
