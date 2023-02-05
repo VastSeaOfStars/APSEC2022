@@ -1,0 +1,14 @@
+1. Test environment
+System: Windows10; Jdk17;
+
+2. Test objectives
+(1) Check whether the logic of 200 solidity bytecodes has changed before and after obfuscation
+(2) Check whether the newly added obfuscated instructions in the bytecode after obfuscation are skipped
+(3) Check whether the main logic path of the obfuscated bytecode control flow graph exists
+(4) Check whether there is any significant change in the running time of the bytecode before and after obfuscation
+
+3. Test results
+(1) 200 solidity bytecodes can run before and after obfuscation
+(2) The logic of the solidity bytecode before and after obfuscation is consistent with the original
+(3) The bytecode main path exists before and after obfuscation
+(4) There is no significant change in the running time of solidity bytecode before and after obfuscation, all meeting expectations
