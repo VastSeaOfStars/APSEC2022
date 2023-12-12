@@ -37,7 +37,7 @@ public class Main {
             long start = System.currentTimeMillis();
             String filename = "example" +".hex";
 
-            List bytecodeFile = readFileContent("F:\\桌面文件\\区块链研究汇报\\字节码混淆APSEC2022" +
+            List bytecodeFile = readFileContent("F:" +
                     "\\github\\ChiWen\\obfucsacion\\src\\dataset\\"+filename);
             System.out.println("read bytecode file……");
             if (bytecodeFile.size() == 0){
