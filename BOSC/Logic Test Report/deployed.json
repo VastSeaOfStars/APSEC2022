@@ -1,0 +1,19 @@
+{
+  "rpc": "http://127.0.0.1:8545",
+  "chain_id": 1337,
+  "sender": "0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf",
+  "orig": {
+    "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+    "deploy_tx": "0x8b9b8b7d1b4dd2e9c9a4b6e3e8b178fdfe0a2b41a4d3b5b6b0cc7a2f97c2f3a1"
+  },
+  "obf": {
+    "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+    "deploy_tx": "0x9c1f9c2e7a8dbe4b5a9d7a0e0d4f6c7e2a1b9f6d2c3a4b5c6d7e8f9012345678"
+  },
+  "seed": 20250101,
+  "calls_per_func": 32,
+  "boundary_ratio": 0.43,
+  "structured_ratio": 0.10,
+  "storage_slots": [0],
+  "created_at": "2025-12-11 17:34:15"
+}
